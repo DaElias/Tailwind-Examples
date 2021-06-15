@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="bg-gray-50	">
+    <section>
+        <h1 class="text-blue-600 text-center px-10 py-5 bg-blue-100	text-3xl sm:text-5xl ">Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. </h1>
+        <div class="container mx-auto  text-base sm:text-lg md:text-xl lg:text-2xl 	">
+            <button
+                class=" bg-blue-500 sm:bg-gray-500 md:bg-red-500 lg:bg-yellow-500 text-white font-bold py-2 px-2 rounded m-10">
+                Click me!!
+            </button>
+            <h2 class="text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+            <h3 class="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
+            <h4 class="bg-red-200 p-5 m-1 text-2xl rounded-full">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. </h4>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
+
+            <div class="text-center text-2xl font-extrabold shadow-inner  h-20 ">Numeros</div>
+            <div class="grid grid-cols-2 grid-row-2   divide-y divide-x   text-center shadow-xl ">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div class="blur-sm	 bg-red-200"> 5</div>
+            </div>
+
+            <div class="mt-5 ml-4 mb-4 border pr-5 text-right 	">
+                <p class="bg-pink-800 rounded text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias in porro quaerat fuga corporis
+                    repudiandae sapiente rerum, animi iusto quia earum laudantium aliquam perferendis labore dolores sit
+                    voluptas. Ipsa, sed.</p>
+                <p class="bg-blue-200  text-justify mt-3 	">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus, laborum provident. Est
+                    adipisci, nisi laboriosam saepe voluptatibus dolores iusto vitae in veniam veritatis consequatur
+                    omnis? Accusantium odio accusamus vel enim. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae dolorem natus ex. Nobis, dolor perspiciatis recusandae veritatis eveniet quos magni rem quo
+                    repudiandae, optio laborum iure exercitationem vero nostrum. Impedit!</p>
+            </div>
+        </div>
+    </section>
+    <section class="container m-auto">
+        <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5">
+            <!--Card 1-->
+            <div class=" w-full lg:max-w-full lg:flex">
+                <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+                    style="background-image: url('./img.jpg')" title="Mountain">
+                </div>
+                <div
+                    class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div class="mb-8">
+                        <p class="text-sm text-gray-600 flex items-center">
+                            <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+                            </svg>
+                            Members only
+                        </p>
+                        <div class="text-gray-900 font-bold text-xl mb-2">Best Mountain Trails 2020</div>
+                        <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full mr-4" class="lazy" src="img.jpg" alt="Avatar of Writer">
+                        <div class="text-sm">
+                            <p class="text-gray-900 leading-none">John Smith</p>
+                            <p class="text-gray-600">Aug 18</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </section>
+    <section>
+        <div class="pt-6 pb-12 bg-gray-300">
+            <div id="card" class="">
+                <h2 class="text-center font-serif  uppercase text-4xl xl:text-5xl">Recent Articles</h2>
+                <!-- container for all cards -->
+                <div class="container w-100 lg:w-4/5 mx-auto flex flex-col">
+                    <!-- card -->
+                    <div v-for="card in cards" class="flex flex-col md:flex-row overflow-hidden
+                                      bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2">
+                        <!-- media -->
+                        <div class="h-64 w-auto md:w-1/2">
+                            <img class="inset-0 h-full w-full object-cover object-center" src="img.jpg" />
+                        </div>
+                        <!-- content -->
+                        <div class="w-full py-4 px-6 text-gray-800 flex flex-col justify-between">
+                            <h3 class="font-semibold text-lg leading-tight truncate">Example</h3>
+                            <p class="mt-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero magni quia nostrum
+                                laudantium assumenda voluptates hic commodi? Mollitia dolor beatae eum voluptatum vel
+                                earum quis exercitationem, excepturi, explicabo perspiciatis nam?
+                            </p>
+                            <p class="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-2">
+                                Lorem &bull; mark
+                            </p>
+                        </div>
+                    </div>
+                    <!--/ card-->
+                </div>
+                <!--/ flex-->
+            </div>
+        </div>
+    </section>
+    <section class="flex container m-auto">
+        <div class="w-full lg:w-1/2 p-3">
+            <div class="flex flex-col lg:flex-row rounded overflow-hidden h-auto lg:h-32 border shadow shadow-lg">
+                <img class="block h-auto w-full lg:w-48 flex-none bg-cover h-24"
+                    src="https://pbs.twimg.com/media/DrM0nIdU0AEhG5b.jpg">
+                <div
+                    class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div class="text-black font-bold text-xl mb-2 leading-tight">Can life make you a bitter developer?
+                    </div>
+                    <p class="text-grey-darker text-base">Read more</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 p-3">
+            <div class="flex flex-col lg:flex-row rounded overflow-hidden h-auto lg:h-32 border shadow shadow-lg">
+                <img class="block h-auto w-full lg:w-48 flex-none bg-cover h-24"
+                    src="https://pbs.twimg.com/media/DrM0nIdU0AEhG5b.jpg">
+                <div
+                    class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div class="text-black font-bold text-xl mb-2 leading-tight">Can life make you a bitter developer?
+                    </div>
+                    <p class="text-grey-darker text-base">Read more</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="bg-purple-100 grid grid-cols-2 container m-auto">
+        <div class=" p-10 md:p-1 md:mx-9 lx:p-1 lg:p-1 2xl:p-3  w-full md:w-1/2">
+            <h3 class="text-purple-300 font-bold mb-4">Card with image</h3>
+            <div class="bg-white rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+                    alt="" class="rounded-t-lg">
+                <div class="p-6">
+                    <h2 class="font-bold mb-2 text-2xl text-purple-800">Card with an image
+                    </h2>
+                    <p class="text-purple-700 mb-2">This is a little bit better of a card!</p>
+                    <a href="#" class="text-purple-600 hover:text-purple-500 underline text-sm">Read More 👉</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="p-10 md:p-1 md:mx-9 lx:p-1 lg:p-1 2xl:p-3 w-full md:w-1/2">
+            <h3 class="text-purple-300 font-bold mb-4">Card with image</h3>
+            <div class="bg-white rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+                    alt="" class="rounded-t-lg">
+                <div class="p-6">
+                    <h2 class="font-bold mb-2 text-2xl text-purple-800">Card with an image
+                    </h2>
+                    <p class="text-purple-700 mb-2">This is a little bit better of a card!</p>
+                    <a href="#" class="text-purple-600 hover:text-purple-500 underline text-sm">Read More 👉</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="p-10  w-full md:w-1/2">
+            <h3 class="text-purple-300 font-bold mb-4">Card with image</h3>
+            <div class="bg-white rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+                    alt="" class="rounded-t-lg">
+                <div class="p-6">
+                    <h2 class="font-bold mb-2 text-2xl text-purple-800">Card with an image
+                    </h2>
+                    <p class="text-purple-700 mb-2">This is a little bit better of a card!</p>
+                    <a href="#" class="text-purple-600 hover:text-purple-500 underline text-sm">Read More 👉</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="p-10  w-full md:w-1/2">
+            <h3 class="text-purple-300 font-bold mb-4">Card with image</h3>
+            <div class="bg-white rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+                    alt="" class="rounded-t-lg">
+                <div class="p-6">
+                    <h2 class="font-bold mb-2 text-2xl text-purple-800">Card with an image
+                    </h2>
+                    <p class="text-purple-700 mb-2">This is a little bit better of a card!</p>
+                    <a href="#" class="text-purple-600 hover:text-purple-500 underline text-sm">Read More 👉</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
